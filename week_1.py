@@ -29,7 +29,7 @@ def calculation():
         pmt = float(input("Enter the annuity payment (PMT): "))
         a = pmt * (1.0 + (r / n)**(n * t) - 1.0)/(r / n)
         interest = a - p
-        print(f"Your annuity plan: {interest}")
+        print(f"Your annuity plan: {a}")
 
 inputs()
 input_2()
