@@ -1,0 +1,28 @@
+START
+   Total_Price = 0
+
+   REPEAT
+      Scan Item
+      INPUT Item_Price
+      Item_Price = Item_Price * Quantity
+      Total_Price = Total_Price + Item_Price
+      DISPLAY "Item added. Current total: ", Total_Price
+
+      DISPLAY "Are there more items? (Yes/No)"
+      INPUT "Yes"
+   UNTIL "No"
+
+   DISPLAY "Total Price: ", TotalPrice
+
+   DISPLAY "Enter payment amount: "
+   INPUT Payment
+
+   IF Payment ≥ Total_Price THEN
+      Change = Payment - Total_Price
+      DISPLAY "Payment successful. Change: "
+      DISPLAY "Generating receipt..."
+   ELSE
+      DISPLAY "Insufficient payment. Please enter the correct amount."
+
+
+END
